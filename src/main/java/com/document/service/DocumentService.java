@@ -9,7 +9,7 @@ import com.document.response.dto.DocumentListResponseDto;
 
 public interface DocumentService {
 
-	public void uploadDocument(DocumentUploadRequestDto reqDto);
+	public String uploadDocument(DocumentUploadRequestDto reqDto);
 
 	public Resource downloadDocument(Integer docId);
 

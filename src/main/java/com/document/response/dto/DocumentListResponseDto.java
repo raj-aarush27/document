@@ -31,6 +31,10 @@ public class DocumentListResponseDto {
 		this.author = author;
 	}
 
+	public DocumentListResponseDto() {
+
+	}
+
 	public Integer getDocId() {
 		return docId;
 	}
