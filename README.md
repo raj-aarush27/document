@@ -12,12 +12,12 @@ Features :-
 (vi)Swagger documentation for APIs.
 
 Tech Stack :-
-Java 17
-Spring Boot 3.x
-Spring Data JPA
-MySQL
-Swagger/OpenAPI
-JUnit & Mockito (for testing)
+(i)Java 17
+(ii)Spring Boot 3.x
+(iii)Spring Data JPA
+(iv)MySQL
+(v)Swagger/OpenAPI
+(vi)JUnit & Mockito (for testing)
 
 Git Clone Url :- 
 https://github.com/raj-aarush27/document.git
