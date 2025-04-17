@@ -41,9 +41,9 @@ public class DocumentServiceImpl implements DocumentService {
 
 	private static Logger logger = LoggerFactory.getLogger(DocumentServiceImpl.class);
 
+	
 	@Override
-	public String uploadDocument(DocumentUploadRequestDto reqDto) {
-		String status = "Failure";
+	public void uploadDocument(DocumentUploadRequestDto reqDto) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
 		String formatDateTime = LocalDateTime.now().format(dtf);
 		String localFile = docLocation;
@@ -74,7 +74,6 @@ public class DocumentServiceImpl implements DocumentService {
 					docObj.setDocName(formatDateTime + "_" + file.getOriginalFilename());
 					docObj.setDocSize(file.getSize());
 					documentManagementRepository.save(docObj);
-					status = "Success";
 				}
 			} catch (Exception e) {
 				logger.error("document updated method caused error at {}: {}", reqDto, e.getMessage());
@@ -98,13 +97,11 @@ public class DocumentServiceImpl implements DocumentService {
 					docObj.setDocName(formatDateTime + "_" + file.getOriginalFilename());
 					docObj.setDocSize(file.getSize());
 					documentManagementRepository.save(docObj);
-					status = "Success";
 				}
 			} catch (Exception e) {
 				logger.error("document uploaded method caused error at {}: {}", reqDto, e.getMessage());
 			}
 		}
-		return status;
 	}
 
 	@Override
