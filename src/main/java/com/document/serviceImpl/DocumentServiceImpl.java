@@ -37,7 +37,7 @@ public class DocumentServiceImpl implements DocumentService {
 	private DocumentManagementRepositoryImpl documentManagementRepositoryImpl;
 
 	@Value("${file.upload-document-dir}")
-	private String docLocation;
+	public String docLocation;
 
 	private static Logger logger = LoggerFactory.getLogger(DocumentServiceImpl.class);
 
